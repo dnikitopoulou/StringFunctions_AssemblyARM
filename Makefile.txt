@@ -1,0 +1,12 @@
+string_manipulation: string_manipulation.o strlen.o strcmp.o strcat.o strcpy.o
+	gcc -Wall -o string_manipulation string_manipulation.o strlen.o strcmp.o strcat.o strcpy.o
+string_manipulation.o: string_manipulation.c
+	gcc -Wall -g string_manipulation.c -c
+strlen.o: strlen.s
+	gcc -Wall -g strlen.s -c
+strcmp.o: strcmp.s
+	gcc -Wall -g strcmp.s -c
+strcat.o: strcat.s
+	gcc -Wall -g strcat.s -c
+strcpy.o: strcpy.s
+	gcc -Wall -g strcpy.s -c
